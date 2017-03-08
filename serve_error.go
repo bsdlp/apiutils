@@ -5,13 +5,6 @@ import (
 	"net/http"
 )
 
-// common http errors
-var (
-	ErrStatusUnauthorized = NewError(http.StatusUnauthorized, "")
-	ErrStatusBadRequest   = NewError(http.StatusBadRequest, "")
-	ErrStatusConflict     = NewError(http.StatusConflict, "")
-)
-
 type errorResponse struct {
 	Status int    `json:"status"`
 	Error  string `json:"error"`
