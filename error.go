@@ -11,7 +11,7 @@ type Error interface {
 // ErrorObject implements Error
 type ErrorObject struct {
 	Status  int    `json:"status"`
-	Message string `json:"message"`
+	Message string `json:"error"`
 }
 
 func (e ErrorObject) Error() string { return e.Message }
